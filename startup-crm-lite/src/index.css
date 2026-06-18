@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@theme{
+     --font-roboto: "Roboto",sans-serif;
+    --color-primary: #2563EB;
+  --color-success: #22C55E;
+  --color-warning: #F59E0B;
+  --color-danger: #EF4444;
+  --color-background: #F8FAFC;
+  --color-card: #FFFFFF;
+
+  --color-text-dark: #0F172A;
+  --color-text-gray: #64748B;
+}
+  
