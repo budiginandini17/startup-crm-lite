@@ -35,16 +35,16 @@ export default function Dashboard() {
       {/* Welcome Header */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div>
-          <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+          <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
             Welcome back, Nandu👋
           </h1>
-          <p className="text-slate-500 dark:text-slate-400 mt-1.5 text-sm md:text-base">
+          <p className="text-gray-500 dark:text-gray-400 mt-1.5 text-sm md:text-base">
             Here's what's happening with your startup leads and sales pipeline today.
           </p>
         </div>
-
+ 
         {/* Date Display */}
-        <div className="inline-flex items-center gap-2 px-4 py-2.5 bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 rounded-xl text-xs font-bold text-slate-500 dark:text-slate-400 shadow-sm self-start md:self-auto">
+        <div className="inline-flex items-center gap-2 px-4 py-2.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-xs font-bold text-gray-500 dark:text-gray-400 shadow-sm self-start md:self-auto">
           <Calendar size={15} className="text-primary" />
           <span>{getTodayFormattedDate()}</span>
         </div>
@@ -82,41 +82,37 @@ export default function Dashboard() {
         />
       </div>
 
-      {/* Main Grid: Pipeline and Quick Actions */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Pipeline Distribution Map - 2 Columns wide on Desktop */}
-        <div className="lg:col-span-2">
+      {/* Main Grid: Pipeline (3/4) + Quick Actions (1/4) on XL */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-6 xl:gap-8">
+        <div className="lg:col-span-2 xl:col-span-3">
           <PipelineOverview leads={leads} />
         </div>
-
-        {/* Actions Shortcuts - 1 Column wide on Desktop */}
-        <div>
+        <div className="xl:col-span-1">
           <QuickActions />
         </div>
       </div>
 
-      {/* Bottom Grid: Recent Leads and Supplemental Insights */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Recent Leads Table - 2 Columns wide on Desktop */}
-        <div className="lg:col-span-2">
+      {/* Bottom Grid: Recent Leads (3/4) + Quarterly Goal (1/4) on XL */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-6 xl:gap-8">
+        <div className="lg:col-span-2 xl:col-span-3">
           <RecentLeads leads={leads} />
         </div>
 
         {/* Premium Quarterly Goal Progress Visual Indicator */}
-        <div className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 rounded-2xl p-6 shadow-sm flex flex-col justify-between h-full min-h-[300px]">
+        <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-sm flex flex-col justify-between h-full min-h-[300px]">
           <div>
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-lg font-bold text-slate-900 dark:text-white">
+              <h2 className="text-lg font-bold text-gray-900 dark:text-white">
                 Quarterly Goal
               </h2>
               <span className="p-2 bg-emerald-50 dark:bg-emerald-950/30 text-success rounded-lg">
                 <TrendingUp size={16} />
               </span>
             </div>
-            <p className="text-xs text-slate-400 dark:text-slate-500 mb-6">
+            <p className="text-xs text-gray-400 dark:text-gray-500 mb-6">
               Track contract sales goals against target benchmarks.
             </p>
-
+ 
             {/* Circular Progress Design representation */}
             <div className="relative flex items-center justify-center my-4">
               <svg className="w-32 h-32 transform -rotate-90">
@@ -124,7 +120,7 @@ export default function Dashboard() {
                   cx="64"
                   cy="64"
                   r="52"
-                  className="stroke-slate-100 dark:stroke-slate-800 fill-transparent"
+                  className="stroke-gray-100 dark:stroke-gray-700 fill-transparent"
                   strokeWidth="8"
                 />
                 <circle
@@ -139,24 +135,24 @@ export default function Dashboard() {
                 />
               </svg>
               <div className="absolute flex flex-col items-center">
-                <span className="text-2xl font-black text-slate-900 dark:text-white">
+                <span className="text-2xl font-black text-gray-900 dark:text-white">
                   78%
                 </span>
-                <span className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase">
+                <span className="text-[10px] font-bold text-gray-400 dark:text-gray-500 uppercase">
                   Reached
                 </span>
               </div>
             </div>
           </div>
-
-          <div className="pt-4 border-t border-slate-100 dark:border-slate-850 flex justify-between text-sm">
+ 
+          <div className="pt-4 border-t border-gray-200 dark:border-gray-700 flex justify-between text-sm">
             <div>
-              <span className="block text-xs font-semibold text-slate-400 dark:text-slate-500">Current</span>
-              <span className="text-base font-bold text-slate-800 dark:text-white">$78,000</span>
+              <span className="block text-xs font-semibold text-gray-400 dark:text-gray-500">Current</span>
+              <span className="text-base font-bold text-gray-800 dark:text-white">$78,000</span>
             </div>
             <div className="text-right">
-              <span className="block text-xs font-semibold text-slate-400 dark:text-slate-500">Target</span>
-              <span className="text-base font-bold text-slate-800 dark:text-white">$100,000</span>
+              <span className="block text-xs font-semibold text-gray-400 dark:text-gray-500">Target</span>
+              <span className="text-base font-bold text-gray-800 dark:text-white">$100,000</span>
             </div>
           </div>
         </div>

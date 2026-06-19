@@ -32,7 +32,7 @@ export default function FilterBar({ activeFilter, onFilterChange, leads = [] }) 
             className={`px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 whitespace-nowrap cursor-pointer flex items-center gap-1.5 border ${
               isActive
                 ? 'bg-primary border-primary text-white shadow-md shadow-blue-500/10 hover:bg-blue-600'
-                : 'bg-white dark:bg-slate-900 border-slate-200/80 dark:border-slate-800/80 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-slate-850 dark:hover:text-slate-100'
+                : 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white'
             }`}
           >
             <span>{filter}</span>
@@ -40,7 +40,7 @@ export default function FilterBar({ activeFilter, onFilterChange, leads = [] }) 
               className={`text-xs px-1.5 py-0.5 rounded-md ${
                 isActive
                   ? 'bg-white/20 text-white'
-                  : 'bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400'
+                  : 'bg-gray-100 dark:bg-gray-900 text-gray-500 dark:text-gray-400'
               }`}
             >
               {count}

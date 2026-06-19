@@ -4,7 +4,26 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>startup-crm-lite</title>
+    <meta name="description" content="Startup CRM Lite — Track leads, sales pipeline, conversions, and revenue analytics for growing startups." />
+    <meta name="theme-color" content="#2563EB" />
+    <meta property="og:title" content="Startup CRM Lite" />
+    <meta property="og:description" content="Manage leads, track conversions, and grow revenue with powerful analytics." />
+    <meta property="og:type" content="website" />
+    <title>Startup CRM Lite — Sales & Analytics Dashboard</title>
+    <script>
+      (function() {
+        const theme = localStorage.getItem('crm_theme');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      })();
+    </script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
   </head>
   <body>
     <div id="root"></div>

@@ -29,31 +29,31 @@ export default function StatsCard({ title, value, icon: Icon, change, color = 'p
   const selectedColorClass = colorMap[color] || colorMap.primary;
 
   return (
-    <div className="group bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:shadow-slate-200/20 dark:hover:shadow-none hover:-translate-y-1 transition-all duration-300">
+    <div className="group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:shadow-gray-200/20 dark:hover:shadow-none hover:-translate-y-1 transition-all duration-300">
       <div className="flex items-center justify-between">
-        <span className="text-sm font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider">
+        <span className="text-sm font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider">
           {title}
         </span>
         <div className={`p-3 rounded-xl border ${selectedColorClass} transition-colors duration-300`}>
           {Icon && <Icon size={20} className="stroke-[2.25]" />}
         </div>
       </div>
-
+ 
       <div className="mt-4 flex items-baseline justify-between">
         <div>
-          <span className="text-3xl font-bold text-slate-900 dark:text-white tracking-tight">
+          <span className="text-3xl font-bold text-gray-900 dark:text-white tracking-tight">
             {value}
           </span>
-          <span className="block text-xs text-slate-400 dark:text-slate-500 mt-1 font-medium">
+          <span className="block text-xs text-gray-400 dark:text-gray-500 mt-1 font-medium">
             vs last month
           </span>
         </div>
-
+ 
         <div
           className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-bold transition-colors duration-300 ${isNegative
               ? 'bg-rose-50 text-danger dark:bg-rose-950/30 dark:text-rose-400'
               : isZero
-                ? 'bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400'
+                ? 'bg-gray-100 text-gray-600 dark:bg-gray-900 dark:text-gray-400'
                 : 'bg-emerald-50 text-success dark:bg-emerald-950/30 dark:text-emerald-400'
             }`}
         >

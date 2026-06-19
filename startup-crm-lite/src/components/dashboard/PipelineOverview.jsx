@@ -15,11 +15,11 @@ export default function PipelineOverview({ leads = [] }) {
   // Gracefully handle empty array
   if (!leads || leads.length === 0) {
     return (
-      <div className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 rounded-2xl p-6">
-        <h2 className="text-lg font-bold text-slate-900 dark:text-white mb-2">
+      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-6">
+        <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
           Pipeline Status
         </h2>
-        <div className="flex flex-col items-center justify-center py-8 text-slate-400 dark:text-slate-500">
+        <div className="flex flex-col items-center justify-center py-8 text-gray-400 dark:text-gray-500">
           <p className="text-sm">No lead pipeline data available.</p>
         </div>
       </div>
@@ -143,23 +143,23 @@ export default function PipelineOverview({ leads = [] }) {
   });
 
   return (
-    <div className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 rounded-2xl p-6 shadow-sm">
+    <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-sm">
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h2 className="text-lg font-bold text-slate-900 dark:text-white">
+          <h2 className="text-lg font-bold text-gray-900 dark:text-white">
             Pipeline Distribution
           </h2>
-          <p className="text-xs text-slate-400 dark:text-slate-500 mt-0.5">
+          <p className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">
             Active distribution across {totalLeads} total leads
           </p>
         </div>
-        <span className="text-xs font-semibold text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded-lg">
+        <span className="text-xs font-semibold text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-900 px-2.5 py-1 rounded-lg">
           Sales Funnel
         </span>
       </div>
 
       {/* Stacked Segment Progress Bar */}
-      <div className="w-full bg-slate-100 dark:bg-slate-800 h-4 rounded-full overflow-hidden flex shadow-inner mb-6">
+      <div className="w-full bg-gray-100 dark:bg-gray-900 h-4 rounded-full overflow-hidden flex shadow-inner mb-6">
         {segments.map((segment) => (
           <div
             key={segment.stage}
@@ -178,19 +178,19 @@ export default function PipelineOverview({ leads = [] }) {
         {segments.map((segment) => (
           <div
             key={segment.stage}
-            className="flex items-center justify-between p-3 rounded-xl border border-slate-100 dark:border-slate-850 hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors"
+            className="flex items-center justify-between p-3 rounded-xl border border-gray-100 dark:border-gray-750 hover:bg-gray-50/50 dark:hover:bg-gray-700/20 transition-colors"
           >
             <div className="flex items-center gap-2.5 min-w-0">
               <span className={`w-3 h-3 rounded-full shrink-0 ${segment.dotBg}`} />
-              <span className="text-sm font-semibold text-slate-700 dark:text-slate-300 truncate">
+              <span className="text-sm font-semibold text-gray-700 dark:text-gray-300 truncate">
                 {segment.stage}
               </span>
             </div>
             <div className="flex items-center gap-1.5 ml-2">
-              <span className="text-xs font-bold text-slate-900 dark:text-white">
+              <span className="text-xs font-bold text-gray-900 dark:text-white">
                 {segment.count}
               </span>
-              <span className="text-[10px] font-semibold text-slate-400 dark:text-slate-500">
+              <span className="text-[10px] font-semibold text-gray-400 dark:text-gray-500">
                 ({segment.percentage}%)
               </span>
             </div>

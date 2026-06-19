@@ -98,10 +98,10 @@ export default function Leads() {
       {/* Header Panel */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white flex items-center gap-2.5">
+          <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white flex items-center gap-2.5">
             Leads Management
           </h1>
-          <p className="text-slate-500 dark:text-slate-400 mt-1.5 text-sm md:text-base">
+          <p className="text-gray-500 dark:text-gray-400 mt-1.5 text-sm md:text-base">
             Track and nurture leads from prospect through closed deal.
           </p>
         </div>
@@ -115,7 +115,7 @@ export default function Leads() {
       </div>
 
       {/* Control Bar (Search, Status Filter) */}
-      <div className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 p-4 rounded-2xl shadow-sm shadow-slate-100/40 dark:shadow-none flex flex-col lg:flex-row gap-4 items-stretch lg:items-center justify-between animate-fade-in">
+      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-4 rounded-2xl shadow-sm flex flex-col lg:flex-row gap-4 items-stretch lg:items-center justify-between animate-fade-in">
         <SearchBar value={searchQuery} onChange={setSearchQuery} />
         <FilterBar
           activeFilter={activeFilter}
@@ -152,24 +152,24 @@ export default function Leads() {
           {/* Backdrop */}
           <div 
             onClick={handleCloseModal}
-            className="fixed inset-0 bg-slate-900/40 dark:bg-slate-950/60 backdrop-blur-xs transition-opacity" 
+            className="fixed inset-0 bg-gray-900/40 dark:bg-gray-950/60 backdrop-blur-xs transition-opacity" 
           />
           
           {/* Modal Content container */}
-          <div className="relative w-full max-w-lg bg-white dark:bg-slate-900 rounded-2xl shadow-xl shadow-slate-900/10 border border-slate-100 dark:border-slate-800 overflow-hidden transform transition-all p-6 z-10">
+          <div className="relative w-full max-w-lg bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden transform transition-all p-6 z-10">
             {/* Modal Header */}
-            <div className="flex items-center justify-between pb-4 mb-4 border-b border-slate-100 dark:border-slate-800">
+            <div className="flex items-center justify-between pb-4 mb-4 border-b border-gray-200 dark:border-gray-700">
               <div>
-                <h2 className="text-xl font-bold text-slate-900 dark:text-white">
+                <h2 className="text-xl font-bold text-gray-900 dark:text-white">
                   {selectedLead ? 'Edit Lead Details' : 'Add New CRM Lead'}
                 </h2>
-                <p className="text-xs text-slate-400 mt-1">
+                <p className="text-xs text-gray-400 mt-1">
                   Fill in the details below to {selectedLead ? 'update the existing' : 'register a new'} lead profile.
                 </p>
               </div>
               <button 
                 onClick={handleCloseModal}
-                className="p-1.5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors cursor-pointer"
+                className="p-1.5 text-gray-400 hover:text-gray-600 dark:hover:text-gray-205 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-lg transition-colors cursor-pointer"
                 aria-label="Close form"
               >
                 <X size={18} />
@@ -196,30 +196,30 @@ export default function Leads() {
           {/* Backdrop */}
           <div 
             onClick={() => setLeadToDelete(null)}
-            className="fixed inset-0 bg-slate-900/40 dark:bg-slate-950/60 backdrop-blur-xs transition-opacity" 
+            className="fixed inset-0 bg-gray-900/40 dark:bg-gray-950/60 backdrop-blur-xs transition-opacity" 
           />
           
           {/* Confirmation Box */}
-          <div className="relative w-full max-w-md bg-white dark:bg-slate-900 rounded-2xl shadow-xl shadow-slate-900/10 border border-slate-100 dark:border-slate-800 transform transition-all p-6 z-10">
+          <div className="relative w-full max-w-md bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 transform transition-all p-6 z-10">
             <div className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-xl bg-red-50 dark:bg-red-950/20 text-red-650 flex items-center justify-center shrink-0">
+              <div className="w-10 h-10 rounded-xl bg-red-50 dark:bg-red-950/20 text-red-600 flex items-center justify-center shrink-0">
                 <AlertTriangle size={20} />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white">
+                <h3 className="text-lg font-bold text-gray-900 dark:text-white">
                   Confirm Lead Deletion
                 </h3>
-                <p className="text-sm text-slate-500 dark:text-slate-400 mt-1.5 leading-relaxed">
-                  Are you sure you want to permanently delete lead <strong className="text-slate-900 dark:text-slate-250 font-semibold">"{leadToDelete.name}"</strong>? This action will remove their profile and cannot be undone.
+                <p className="text-sm text-gray-500 dark:text-gray-400 mt-1.5 leading-relaxed">
+                  Are you sure you want to permanently delete lead <strong className="text-gray-900 dark:text-gray-200 font-semibold">"{leadToDelete.name}"</strong>? This action will remove their profile and cannot be undone.
                 </p>
               </div>
             </div>
-
-            <div className="flex items-center justify-end gap-3 mt-6 pt-4 border-t border-slate-100 dark:border-slate-800">
+ 
+            <div className="flex items-center justify-end gap-3 mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
               <button
                 type="button"
                 onClick={() => setLeadToDelete(null)}
-                className="px-4 py-2 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 rounded-xl text-sm font-medium transition-all hover:bg-slate-50 dark:hover:bg-slate-800 cursor-pointer"
+                className="px-4 py-2 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 rounded-xl text-sm font-medium transition-all hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer"
               >
                 Cancel
               </button>

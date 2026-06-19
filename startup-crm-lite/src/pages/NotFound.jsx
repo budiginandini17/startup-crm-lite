@@ -18,10 +18,10 @@ export default function NotFound() {
       </div>
 
       {/* Text Info */}
-      <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-3 tracking-tight">
+      <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-3 tracking-tight">
         Page Not Found
       </h1>
-      <p className="text-slate-500 dark:text-slate-400 max-w-md text-base md:text-lg mb-8 leading-relaxed">
+      <p className="text-gray-500 dark:text-gray-400 max-w-md text-base md:text-lg mb-8 leading-relaxed">
         It looks like you've wandered off the track. The page you are looking for doesn't exist or has been relocated.
       </p>
 

@@ -17,11 +17,11 @@ export default function RecentLeads({ leads = [] }) {
   // Gracefully handle empty array
   if (!leads || leads.length === 0) {
     return (
-      <div className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 rounded-2xl p-6 shadow-sm">
-        <h2 className="text-lg font-bold text-slate-900 dark:text-white mb-4">
+      <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-sm">
+        <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
           Recent Leads
         </h2>
-        <div className="flex flex-col items-center justify-center py-10 text-slate-400 dark:text-slate-500">
+        <div className="flex flex-col items-center justify-center py-10 text-gray-400 dark:text-gray-500">
           <p className="text-sm">No leads in the system yet.</p>
         </div>
       </div>
@@ -90,52 +90,52 @@ export default function RecentLeads({ leads = [] }) {
       case 'closedlost':
         return 'bg-rose-50 text-danger border-rose-100 dark:bg-rose-950/20 dark:text-danger dark:border-rose-900/30';
       default:
-        return 'bg-slate-50 text-slate-600 border-slate-100 dark:bg-slate-800 dark:text-slate-400 dark:border-slate-700/50';
+        return 'bg-gray-50 text-gray-600 border-gray-200 dark:bg-gray-850 dark:text-gray-400 dark:border-gray-700/50';
     }
   };
 
   return (
-    <div className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 rounded-2xl shadow-sm overflow-hidden flex flex-col h-full">
-      <div className="p-6 border-b border-slate-100 dark:border-slate-850 flex items-center justify-between">
+    <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-sm overflow-hidden flex flex-col h-full">
+      <div className="p-6 border-b border-gray-200 dark:border-gray-700 flex items-center justify-between">
         <div>
-          <h2 className="text-lg font-bold text-slate-900 dark:text-white">
+          <h2 className="text-lg font-bold text-gray-900 dark:text-white">
             Recent Leads
           </h2>
-          <p className="text-xs text-slate-400 dark:text-slate-500 mt-0.5">
+          <p className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">
             Latest 5 leads added to your CRM
           </p>
         </div>
       </div>
-
+ 
       <div className="overflow-x-auto flex-1">
         <table className="w-full border-collapse text-left">
           <thead>
-            <tr className="bg-slate-50 dark:bg-slate-800/40 border-b border-slate-150 dark:border-slate-850 text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider">
+            <tr className="bg-gray-50 dark:bg-gray-800/40 border-b border-gray-200 dark:border-gray-700 text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider">
               <th className="px-6 py-4">Name</th>
               <th className="px-6 py-4">Company</th>
               <th className="px-6 py-4">Status</th>
               <th className="px-6 py-4">Date Added</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-slate-100 dark:divide-slate-850">
+          <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
             {processedLeads.map((lead) => {
               const stage = lead.stage || lead.status || 'New';
               return (
                 <tr
                   key={lead.id}
-                  className="hover:bg-slate-50/50 dark:hover:bg-slate-800/20 transition-colors duration-250 group"
+                  className="hover:bg-gray-50/50 dark:hover:bg-gray-800/20 transition-colors duration-250 group"
                 >
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-full bg-blue-50 dark:bg-slate-800 text-primary dark:text-blue-400 font-bold text-xs flex items-center justify-center shadow-inner group-hover:scale-105 transition-transform duration-250 border border-blue-100/30 dark:border-slate-700/50">
+                      <div className="w-9 h-9 rounded-full bg-blue-50 dark:bg-gray-700 text-primary dark:text-blue-400 font-bold text-xs flex items-center justify-center shadow-inner group-hover:scale-105 transition-transform duration-250 border border-blue-100/30 dark:border-gray-700/50">
                         {getInitials(lead.name)}
                       </div>
-                      <span className="font-semibold text-slate-950 dark:text-white text-sm">
+                      <span className="font-semibold text-gray-900 dark:text-white text-sm">
                         {lead.name}
                       </span>
                     </div>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-slate-500 dark:text-slate-400">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
                     {lead.company}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
@@ -147,7 +147,7 @@ export default function RecentLeads({ leads = [] }) {
                       {stage}
                     </span>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-xs font-medium text-slate-400 dark:text-slate-500">
+                  <td className="px-6 py-4 whitespace-nowrap text-xs font-medium text-gray-400 dark:text-gray-500">
                     {formatDate(lead.createdAt || lead.dateAdded)}
                   </td>
                 </tr>

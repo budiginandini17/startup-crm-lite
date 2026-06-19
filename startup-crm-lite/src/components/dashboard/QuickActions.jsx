@@ -63,17 +63,17 @@ export default function QuickActions({ onAddLead, onExportData }) {
   };
 
   return (
-    <div className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 rounded-2xl p-6 shadow-sm flex flex-col h-full">
+    <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-sm flex flex-col h-full">
       <div className="mb-5">
-        <h2 className="text-lg font-bold text-slate-900 dark:text-white">
+        <h2 className="text-lg font-bold text-gray-900 dark:text-white">
           Quick Actions
         </h2>
-        <p className="text-xs text-slate-400 dark:text-slate-500 mt-0.5">
+        <p className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">
           Execute common sales CRM workflows
         </p>
       </div>
-
-      <div className="flex flex-col sm:flex-row lg:flex-col gap-3.5 justify-center flex-1">
+ 
+      <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-col gap-3.5 justify-center flex-1">
         {/* Add New Lead Action */}
         <button
           onClick={handleAddLeadClick}
@@ -82,22 +82,22 @@ export default function QuickActions({ onAddLead, onExportData }) {
           <Plus size={18} className="stroke-[2.5]" />
           <span>Add New Lead</span>
         </button>
-
+ 
         {/* View All Leads Action */}
         <button
           onClick={handleViewLeadsClick}
-          className="flex-1 inline-flex items-center justify-center gap-2.5 px-5 py-3.5 border border-slate-250 dark:border-slate-800 dark:bg-slate-950/20 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/60 rounded-xl font-bold transition-all duration-200 hover:border-slate-300 dark:hover:border-slate-700 active:scale-[0.98]"
+          className="flex-1 inline-flex items-center justify-center gap-2.5 px-5 py-3.5 border border-gray-200 dark:border-gray-700 dark:bg-gray-900/20 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/60 rounded-xl font-bold transition-all duration-200 hover:border-gray-300 dark:hover:border-gray-600 active:scale-[0.98]"
         >
-          <Users size={18} className="stroke-[2.25] text-slate-400" />
+          <Users size={18} className="stroke-[2.25] text-gray-400" />
           <span>View All Leads</span>
         </button>
-
+ 
         {/* Export Data Action */}
         <button
           onClick={handleExportClick}
-          className="flex-1 inline-flex items-center justify-center gap-2.5 px-5 py-3.5 border border-slate-250 dark:border-slate-800 dark:bg-slate-950/20 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800/60 rounded-xl font-bold transition-all duration-200 hover:border-slate-300 dark:hover:border-slate-700 active:scale-[0.98]"
+          className="flex-1 inline-flex items-center justify-center gap-2.5 px-5 py-3.5 border border-gray-200 dark:border-gray-700 dark:bg-gray-900/20 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/60 rounded-xl font-bold transition-all duration-200 hover:border-gray-300 dark:hover:border-gray-600 active:scale-[0.98]"
         >
-          <Download size={18} className="stroke-[2.25] text-slate-400" />
+          <Download size={18} className="stroke-[2.25] text-gray-400" />
           <span>Export Data</span>
         </button>
       </div>

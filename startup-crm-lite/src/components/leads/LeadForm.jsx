@@ -118,11 +118,11 @@ export default function LeadForm({ initialData, onSubmit, onCancel }) {
       <div className="space-y-4">
         {/* Name Field */}
         <div>
-          <label htmlFor="name" className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
+          <label htmlFor="name" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1.5">
             Full Name <span className="text-red-500">*</span>
           </label>
           <div className="relative">
-            <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+            <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
               <User size={16} />
             </div>
             <input
@@ -135,10 +135,10 @@ export default function LeadForm({ initialData, onSubmit, onCancel }) {
               aria-required="true"
               aria-invalid={!!errors.name}
               aria-describedby={errors.name ? "name-error" : undefined}
-              className={`block w-full pl-10 pr-4 py-2.5 bg-slate-50 dark:bg-slate-800/60 border rounded-xl text-sm transition-all focus:outline-none focus:ring-2 focus:bg-white dark:focus:bg-slate-900 ${
+              className={`block w-full pl-10 pr-4 py-2.5 bg-gray-50 dark:bg-gray-800/60 border rounded-xl text-sm transition-all focus:outline-none focus:ring-2 focus:bg-white dark:focus:bg-gray-900 ${
                 errors.name
                   ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20'
-                  : 'border-slate-200 dark:border-slate-700/60 focus:border-primary focus:ring-primary/20'
+                  : 'border-gray-200 dark:border-gray-700/60 focus:border-primary focus:ring-primary/20'
               }`}
             />
           </div>
@@ -151,11 +151,11 @@ export default function LeadForm({ initialData, onSubmit, onCancel }) {
 
         {/* Company Field */}
         <div>
-          <label htmlFor="company" className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
+          <label htmlFor="company" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1.5">
             Company Name <span className="text-red-500">*</span>
           </label>
           <div className="relative">
-            <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+            <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
               <Building size={16} />
             </div>
             <input
@@ -168,10 +168,10 @@ export default function LeadForm({ initialData, onSubmit, onCancel }) {
               aria-required="true"
               aria-invalid={!!errors.company}
               aria-describedby={errors.company ? "company-error" : undefined}
-              className={`block w-full pl-10 pr-4 py-2.5 bg-slate-50 dark:bg-slate-800/60 border rounded-xl text-sm transition-all focus:outline-none focus:ring-2 focus:bg-white dark:focus:bg-slate-900 ${
+              className={`block w-full pl-10 pr-4 py-2.5 bg-gray-50 dark:bg-gray-800/60 border rounded-xl text-sm transition-all focus:outline-none focus:ring-2 focus:bg-white dark:focus:bg-gray-900 ${
                 errors.company
                   ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20'
-                  : 'border-slate-200 dark:border-slate-700/60 focus:border-primary focus:ring-primary/20'
+                  : 'border-gray-200 dark:border-gray-700/60 focus:border-primary focus:ring-primary/20'
               }`}
             />
           </div>
@@ -184,11 +184,11 @@ export default function LeadForm({ initialData, onSubmit, onCancel }) {
 
         {/* Email Field */}
         <div>
-          <label htmlFor="email" className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
+          <label htmlFor="email" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1.5">
             Email Address <span className="text-red-500">*</span>
           </label>
           <div className="relative">
-            <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+            <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
               <Mail size={16} />
             </div>
             <input
@@ -201,10 +201,10 @@ export default function LeadForm({ initialData, onSubmit, onCancel }) {
               aria-required="true"
               aria-invalid={!!errors.email}
               aria-describedby={errors.email ? "email-error" : undefined}
-              className={`block w-full pl-10 pr-4 py-2.5 bg-slate-50 dark:bg-slate-800/60 border rounded-xl text-sm transition-all focus:outline-none focus:ring-2 focus:bg-white dark:focus:bg-slate-900 ${
+              className={`block w-full pl-10 pr-4 py-2.5 bg-gray-50 dark:bg-gray-800/60 border rounded-xl text-sm transition-all focus:outline-none focus:ring-2 focus:bg-white dark:focus:bg-gray-900 ${
                 errors.email
-                  ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20'
-                  : 'border-slate-200 dark:border-slate-700/60 focus:border-primary focus:ring-primary/20'
+                  ? 'border-red-500 focus:border-red-500 focus:ring-red-505/20'
+                  : 'border-gray-200 dark:border-gray-700/60 focus:border-primary focus:ring-primary/20'
               }`}
             />
           </div>
@@ -217,11 +217,11 @@ export default function LeadForm({ initialData, onSubmit, onCancel }) {
 
         {/* Phone Field */}
         <div>
-          <label htmlFor="phone" className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
+          <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1.5">
             Phone Number
           </label>
           <div className="relative">
-            <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+            <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
               <Phone size={16} />
             </div>
             <input
@@ -231,7 +231,7 @@ export default function LeadForm({ initialData, onSubmit, onCancel }) {
               value={formData.phone}
               onChange={handleChange}
               placeholder="e.g. +1 (555) 234-5678"
-              className="block w-full pl-10 pr-4 py-2.5 bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 rounded-xl text-sm transition-all focus:outline-none focus:ring-2 focus:bg-white dark:focus:bg-slate-900 focus:border-primary focus:ring-primary/20"
+              className="block w-full pl-10 pr-4 py-2.5 bg-gray-50 dark:bg-gray-800/60 border border-gray-200 dark:border-gray-700/60 rounded-xl text-sm transition-all focus:outline-none focus:ring-2 focus:bg-white dark:focus:bg-gray-900 focus:border-primary focus:ring-primary/20"
             />
           </div>
         </div>
@@ -240,11 +240,11 @@ export default function LeadForm({ initialData, onSubmit, onCancel }) {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {/* Status Dropdown */}
           <div>
-            <label htmlFor="status" className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
+            <label htmlFor="status" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1.5">
               Status
             </label>
             <div className="relative">
-              <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+              <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
                 <BarChart2 size={16} />
               </div>
               <select
@@ -252,15 +252,15 @@ export default function LeadForm({ initialData, onSubmit, onCancel }) {
                 id="status"
                 value={formData.status}
                 onChange={handleChange}
-                className="block w-full pl-10 pr-4 py-2.5 bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 rounded-xl text-sm transition-all focus:outline-none focus:ring-2 focus:bg-white dark:focus:bg-slate-900 focus:border-primary focus:ring-primary/20 appearance-none cursor-pointer"
+                className="block w-full pl-10 pr-4 py-2.5 bg-gray-50 dark:bg-gray-800/60 border border-gray-200 dark:border-gray-700/60 rounded-xl text-sm transition-all focus:outline-none focus:ring-2 focus:bg-white dark:focus:bg-gray-905 focus:border-primary focus:ring-primary/20 appearance-none cursor-pointer text-gray-900 dark:text-white"
               >
                 {STATUS_OPTIONS.map((opt) => (
-                  <option key={opt} value={opt} className="dark:bg-slate-900">
+                  <option key={opt} value={opt} className="dark:bg-gray-900 text-gray-900 dark:text-white">
                     {opt}
                   </option>
                 ))}
               </select>
-              <div className="absolute inset-y-0 right-0 pr-3.5 flex items-center pointer-events-none text-slate-400">
+              <div className="absolute inset-y-0 right-0 pr-3.5 flex items-center pointer-events-none text-gray-400">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                 </svg>
@@ -270,11 +270,11 @@ export default function LeadForm({ initialData, onSubmit, onCancel }) {
 
           {/* Source Dropdown */}
           <div>
-            <label htmlFor="source" className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
+            <label htmlFor="source" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1.5">
               Source
             </label>
             <div className="relative">
-              <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+              <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
                 <Radio size={16} />
               </div>
               <select
@@ -282,15 +282,15 @@ export default function LeadForm({ initialData, onSubmit, onCancel }) {
                 id="source"
                 value={formData.source}
                 onChange={handleChange}
-                className="block w-full pl-10 pr-4 py-2.5 bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 rounded-xl text-sm transition-all focus:outline-none focus:ring-2 focus:bg-white dark:focus:bg-slate-900 focus:border-primary focus:ring-primary/20 appearance-none cursor-pointer"
+                className="block w-full pl-10 pr-4 py-2.5 bg-gray-50 dark:bg-gray-800/60 border border-gray-200 dark:border-gray-700/60 rounded-xl text-sm transition-all focus:outline-none focus:ring-2 focus:bg-white dark:focus:bg-gray-905 focus:border-primary focus:ring-primary/20 appearance-none cursor-pointer text-gray-900 dark:text-white"
               >
                 {SOURCE_OPTIONS.map((opt) => (
-                  <option key={opt} value={opt} className="dark:bg-slate-900">
+                  <option key={opt} value={opt} className="dark:bg-gray-900 text-gray-900 dark:text-white">
                     {opt}
                   </option>
                 ))}
               </select>
-              <div className="absolute inset-y-0 right-0 pr-3.5 flex items-center pointer-events-none text-slate-400">
+              <div className="absolute inset-y-0 right-0 pr-3.5 flex items-center pointer-events-none text-gray-400">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                 </svg>
@@ -301,11 +301,11 @@ export default function LeadForm({ initialData, onSubmit, onCancel }) {
       </div>
 
       {/* Action Buttons */}
-      <div className="flex items-center justify-end gap-3 pt-4 border-t border-slate-100 dark:border-slate-800">
+      <div className="flex items-center justify-end gap-3 pt-4 border-t border-gray-200 dark:border-gray-700">
         <button
           type="button"
           onClick={onCancel}
-          className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 rounded-xl text-sm font-medium transition-all hover:bg-slate-50 dark:hover:bg-slate-800"
+          className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 rounded-xl text-sm font-medium transition-all hover:bg-gray-50 dark:hover:bg-gray-800"
         >
           <X size={16} />
           <span>Cancel</span>

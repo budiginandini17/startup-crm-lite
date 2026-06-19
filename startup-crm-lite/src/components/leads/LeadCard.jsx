@@ -47,7 +47,7 @@ export default function LeadCard({ lead, onEdit, onDelete }) {
 
   return (
     <div 
-      className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 rounded-2xl p-5 hover:shadow-lg hover:shadow-slate-100 dark:hover:shadow-none transition-all duration-300 flex flex-col justify-between h-full group"
+      className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-5 hover:shadow-lg hover:shadow-gray-200/10 dark:hover:shadow-none transition-all duration-300 flex flex-col justify-between h-full group"
     >
       <div>
         {/* Header - Avatar, Name/Company and Status */}
@@ -57,11 +57,11 @@ export default function LeadCard({ lead, onEdit, onDelete }) {
               {initial}
             </div>
             <div className="min-w-0">
-              <h3 className="font-bold text-slate-900 dark:text-white text-base truncate group-hover:text-primary transition-colors duration-200">
+              <h3 className="font-bold text-gray-900 dark:text-white text-base truncate group-hover:text-primary transition-colors duration-200">
                 {lead.name}
               </h3>
-              <div className="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-                <Building2 size={13} className="text-slate-400 shrink-0" />
+              <div className="flex items-center gap-1.5 text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+                <Building2 size={13} className="text-gray-400 shrink-0" />
                 <span className="truncate">{lead.company}</span>
               </div>
             </div>
@@ -71,7 +71,7 @@ export default function LeadCard({ lead, onEdit, onDelete }) {
           <div className="flex items-center gap-1 shrink-0 opacity-80 md:opacity-0 group-hover:opacity-100 transition-opacity duration-200">
             <button
               onClick={() => onEdit(lead)}
-              className="p-1.5 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-all cursor-pointer"
+              className="p-1.5 text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-all cursor-pointer"
               title="Edit Lead"
               aria-label={`Edit ${lead.name}`}
             >
@@ -79,7 +79,7 @@ export default function LeadCard({ lead, onEdit, onDelete }) {
             </button>
             <button
               onClick={() => onDelete(lead.id)}
-              className="p-1.5 text-slate-400 hover:text-red-600 rounded-lg hover:bg-red-50 dark:hover:bg-red-950/20 transition-all cursor-pointer"
+              className="p-1.5 text-gray-400 hover:text-red-650 rounded-lg hover:bg-red-50 dark:hover:bg-red-950/20 transition-all cursor-pointer"
               title="Delete Lead"
               aria-label={`Delete ${lead.name}`}
             >
@@ -87,23 +87,23 @@ export default function LeadCard({ lead, onEdit, onDelete }) {
             </button>
           </div>
         </div>
-
+ 
         {/* Status and Source tags */}
         <div className="flex flex-wrap items-center gap-2 mb-5">
           <StatusBadge status={lead.status} />
           {lead.source && (
-            <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-semibold uppercase tracking-wider bg-slate-50 dark:bg-slate-800 text-slate-500 dark:text-slate-400 border border-slate-200/50 dark:border-slate-700/50">
+            <span className="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-semibold uppercase tracking-wider bg-gray-50 dark:bg-gray-900 text-gray-500 dark:text-gray-400 border border-gray-200/50 dark:border-gray-700/50">
               <Radio size={9} className="mr-1 opacity-70" />
               {lead.source}
             </span>
           )}
         </div>
-
+ 
         {/* Contact Information Details */}
         <div className="space-y-2.5 text-sm">
           {/* Email */}
-          <div className="flex items-center gap-2.5 text-slate-600 dark:text-slate-355 text-xs md:text-sm">
-            <Mail size={14} className="text-slate-400 shrink-0" />
+          <div className="flex items-center gap-2.5 text-gray-600 dark:text-gray-300 text-xs md:text-sm">
+            <Mail size={14} className="text-gray-400 shrink-0" />
             <a 
               href={`mailto:${lead.email}`} 
               className="hover:text-primary hover:underline truncate"
@@ -112,11 +112,11 @@ export default function LeadCard({ lead, onEdit, onDelete }) {
               {lead.email}
             </a>
           </div>
-
+ 
           {/* Phone */}
           {lead.phone ? (
-            <div className="flex items-center gap-2.5 text-slate-600 dark:text-slate-355 text-xs md:text-sm">
-              <Phone size={14} className="text-slate-400 shrink-0" />
+            <div className="flex items-center gap-2.5 text-gray-600 dark:text-gray-300 text-xs md:text-sm">
+              <Phone size={14} className="text-gray-400 shrink-0" />
               <a 
                 href={`tel:${lead.phone}`} 
                 className="hover:text-primary hover:underline truncate"
@@ -126,16 +126,16 @@ export default function LeadCard({ lead, onEdit, onDelete }) {
               </a>
             </div>
           ) : (
-            <div className="flex items-center gap-2.5 text-slate-400 dark:text-slate-500 text-xs md:text-sm italic">
+            <div className="flex items-center gap-2.5 text-gray-400 dark:text-gray-500 text-xs md:text-sm italic">
               <Phone size={14} className="shrink-0 opacity-60" />
               <span>No phone number</span>
             </div>
           )}
         </div>
       </div>
-
+ 
       {/* Footer Info - Date Added */}
-      <div className="mt-5 pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-[11px] text-slate-400 dark:text-slate-500">
+      <div className="mt-5 pt-3 border-t border-gray-200 dark:border-gray-700/80 flex items-center justify-between text-[11px] text-gray-400 dark:text-gray-500">
         <div className="flex items-center gap-1">
           <Calendar size={12} className="shrink-0" />
           <span>Added: {formatDate(lead.dateAdded)}</span>

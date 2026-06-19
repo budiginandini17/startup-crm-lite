@@ -36,8 +36,7 @@ export function ThemeProvider({ children }) {
   });
 
   /**
-   * Synchronize the `dark` class on the root HTML element and
-   * persist the preference to localStorage whenever it changes.
+   * Synchronize the `dark` class on the root HTML element on initial mount.
    */
   useEffect(() => {
     const root = document.documentElement;
@@ -46,14 +45,25 @@ export function ThemeProvider({ children }) {
     } else {
       root.classList.remove('dark');
     }
-    localStorage.setItem(STORAGE_KEY, isDarkMode ? 'dark' : 'light');
-  }, [isDarkMode]);
+  }, []);
 
   /**
    * Toggles the theme between light and dark mode.
+   * Flips isDarkMode, adds/removes 'dark' class on document.documentElement,
+   * and saves the preference to localStorage.
    */
   const toggleTheme = useCallback(() => {
-    setIsDarkMode((prev) => !prev);
+    setIsDarkMode((prev) => {
+      const nextValue = !prev;
+      const root = document.documentElement;
+      if (nextValue) {
+        root.classList.add('dark');
+      } else {
+        root.classList.remove('dark');
+      }
+      localStorage.setItem(STORAGE_KEY, nextValue ? 'dark' : 'light');
+      return nextValue;
+    });
   }, []);
 
   /** @type {ThemeContextValue} */
